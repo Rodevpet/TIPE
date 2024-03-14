@@ -1,0 +1,87 @@
+\documentclass[a4paper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Chargement des paquet externe %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Détection des symboles
+\usepackage[utf8]{inputenc}
+
+% Taille et configuration de la page
+\usepackage{geometry}
+\usepackage{fancyhdr}
+
+% Paquet de la matière et Raccourci commun à tout les modèles
+\usepackage{./macros/Raccourci_Commun}
+\usepackage{./macros/Math}
+\usepackage{./macros/PC}
+
+% Graphique
+\usepackage{tikz}
+
+% Date et configuration du compilateur
+\usepackage{datetime}
+\usepackage{hyperref}
+\usepackage{systeme}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%    Configuration du modèle    %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Taille et marge de la page
+\geometry{a4paper, margin=3cm}
+
+% Début du docuement
+\begin{document}
+% Début de la page de garde
+\begin{titlepage}
+  \definecolor{HR}{HTML}{2D88C4}
+  % Bord gauche rouge
+  \tikz[remember picture,overlay] \node[opacity=1.0,inner sep=0pt] at (current page.west){
+        \begin{tikzpicture}[scale=3]
+            \fill[HR] (-0.5,5) rectangle (-2,-5);
+         \end{tikzpicture}
+  };
+    \centering
+    \vspace{-40pt}
+
+    % Photo de l'établissement
+    \includegraphics[width=0.4\textwidth]{logo_CRNT.jpg}\par
+
+    \vspace{1cm}
+
+    {\scshape\huge TIPE \par}
+
+    {\scshape\large Transition - Transformation - Convertion \par}
+
+    \vspace{2.5cm}
+
+    {\Huge\bfseries Titre \par}
+
+    \vspace{2cm}
+    {\Large Robin PETIT, Autheur \par}
+    {\Large Email: Robin\_Petit01@etu.u-bourgogne.f \par}
+    \vspace{0.5cm}
+    % Date
+    \vfill{\large \today\par}
+% Fin de la page de garde
+\end{titlepage}
+
+% Début de la mise en palce de la police de caractère
+\sffamily\Large
+
+% Construction de la table des matières
+\tableofcontents
+
+% Initialisation de la première page
+\newpage
+\section{Présentation}
+% Fin de la mise en palce de la police de caractère
+\sffamily\Large
+
+% Fin du document
+\end{document}

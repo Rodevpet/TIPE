@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% Chargement des paquet externe %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[version=4]{mhchem}
+
+\usepackage{xstring}
+% Permet de faire de la topologie
+\usepackage{chemfig}
+
+% Tableau mathématique (Tableau d'avancement)
+\usepackage{array}
+
+% Symbole mathématique, (symbole des réels,)
+\usepackage{amsfonts}
+
+\newcommand \dbl [2]{
+    \IfSubStr{#1}{t}{\def\t{90=\|,}}{\def\t{ }}
+    \IfSubStr{#1}{r}{\def\r{0=\|,}}{\def\r{ }}
+    \IfSubStr{#1}{b}{\def\b{-90=\|,}}{\def\b{ }}
+    \IfSubStr{#1}{l}{\def\l{180=\|,}}{\def\l{ }}
+    \charge{\t \r \b \l}{#2}
+}
+\newcommand \avancetable[8]{
+% Nom des molécules
+\def\ReacA{\ce{#1}}
+\def\ReacB{\ce{#2}}
+\def\ProdC{\ce{#3}}
+\def\ProdD{\ce{#4}}
+% Ligne 1
+\def\InitReacA{#5}
+\def\InitReacB{#6}
+\def\InitProdC{#7}
+\def\InitProdD{#8}
+\MoleculeName
+}
+\newcommand \MoleculeName[8]{
+  \begin{array}{|l l|c|c|c|c|}
+  \hline
+  \text{Tableau d'avancement}
+  \\\hline
+  \text{Etat d'avancement} &&
+  \begin{array}{c c c}
+  \ReacA & + & \ReacB
+  \end{array}
+  & \rightleftharpoons &
+  \begin{array}{c c c}
+  \ProdC & + & \ProdD
+  \end{array}\\\hline
+  \text{Etat initiale}& x=0&
+  \begin{array}{c c c}
+  \InitReacA &\quad & \InitReacB
+  \end{array}
+  &&
+  \begin{array}{c c c}
+  \InitProdC &\quad & \InitProdD
+  \end{array}\\\hline
+  \text{Etat intermédiaire} & x &
+  \begin{array}{c c c}
+  #1 &\quad& #2
+  \end{array} &&
+  \begin{array}{c c c}
+  #3 &\quad & #4
+  \end{array}
+  \\\hline
+  \text{Etat finale} & x_{max} &
+\begin{array}{c c c}  #5 &\quad& #6\end{array} && \begin{array}{c c c} #7&\quad& #8\end{array}\\\hline\end{array}}
+
+% Concentration
+\newcommand{\Ci}[1]{
+    [\ce{#1}]_i
+}
+\newcommand{\Cf}[1]{
+    [\ce{#1}]_f
+}
+\newcommand{\Cm}[1]{
+    [\ce{#1}]_{max}
+}
+\newcommand{\Ceq}[1]{
+    [\ce{#1}]_{eq}
+}
+% Quantité
+\newcommand{\Qi}[1]{
+    n(\ce{#1})_i
+}
+\newcommand{\Qf}[1]{
+    n(\ce{#1})_f
+}
+\newcommand{\QCm}[1]{
+    n(\ce{#1})_{max}
+}
+\newcommand{\Qeq}[1]{
+    n(\ce{#1})_{eq}
+}
+
+\renewcommand{\vec}[1]{
+    \overrightarrow{#1}
+}
+\newcommand{\se}[2]{
+\begin{cases}
+#1\\
+#2
+\end{cases}
+}
+
+\begingroup
+\lccode`~=`*
+\lowercase{\endgroup
+\def~{\times}%
+}%
+\mathcode`*="8000
+
+\renewcommand{\{}{
+\left\lbrace
+}
+\renewcommand{\}}{
+\right\rbrace
+}
