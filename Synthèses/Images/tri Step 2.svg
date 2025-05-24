@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="-141.73228 1514.7422 739.93694 328.09206" width="739.93694" height="328.09206">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 6 6" markerWidth="6" markerHeight="6" color="black">
+      <g>
+        <path d="M 3.7333333 0 L 0 -1.4 L 0 1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -2 5 4" markerWidth="5" markerHeight="4" color="black">
+      <g>
+        <path d="M 2.6133333 0 L 0 -.98 L 0 .98 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g id="Corr_lation" fill-opacity="1" stroke-dasharray="none" stroke="none" fill="none" stroke-opacity="1">
+    <title>Corrélation</title>
+    <g id="Corr_lation_Calque_1">
+      <title>Calque 1</title>
+      <g id="Graphic_2376">
+        <rect x="85.03937" y="1644.0945" width="28.346457" height="113.38583" fill="#c0c0ff"/>
+        <rect x="85.03937" y="1644.0945" width="28.346457" height="113.38583" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(90.03937 1691.5634)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="4.725228" y="15" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2375">
+        <rect x="113.38583" y="1714.1049" width="28.346457" height="42.519685" fill="#c0c0ff"/>
+        <rect x="113.38583" y="1714.1049" width="28.346457" height="42.519685" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(118.38583 1726.1407)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="4.725228" y="15" xml:space="preserve">5</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2373">
+        <rect x="56.69291" y="1685.7584" width="28.346457" height="71.721875" fill="#c0c0ff"/>
+        <rect x="56.69291" y="1685.7584" width="28.346457" height="71.721875" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(61.69291 1712.3954)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="4.725228" y="15" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Line_2372">
+        <line x1="56.69291" y1="1757.4803" x2="56.69291" y2="1546.6087" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_2371">
+        <line x1="56.69291" y1="1757.4803" x2="155.03728" y2="1758.1671" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_2369">
+        <text transform="translate(67.195 1663.2677)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2368">
+        <text transform="translate(123.38791 1690.7584)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2365">
+        <text transform="translate(-136.73228 1521.5354)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Nombre de correspondances</tspan>
+          <tspan font-family="Arial" font-size="15" fill="black" x="18.779297" y="31.490723" xml:space="preserve">consécutives maximum</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2364">
+        <text transform="translate(29.392494 1817.6587) rotate(-61)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2378">
+        <text transform="translate(95.04146 1620.363)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">8</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2379">
+        <text transform="translate(57.66842 1822.1579) rotate(-61)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2380">
+        <text transform="translate(86.08541 1823.9511) rotate(-61)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 3</tspan>
+        </text>
+      </g>
+      <g id="Line_2381">
+        <line x1="-22.214517" y1="1760.1885" x2="54.688216" y2="1727.4309" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_2382">
+        <text transform="translate(-99.05895 1759.8313)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Correspondances</tspan>
+          <tspan font-family="Arial" font-size="15" fill="black" x="15.845947" y="31.490723" xml:space="preserve">consécutives</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2396">
+        <rect x="510.80714" y="1642.3012" width="28.346457" height="113.38583" fill="#c0c0ff"/>
+        <rect x="510.80714" y="1642.3012" width="28.346457" height="113.38583" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(515.80714 1689.7701)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="4.725228" y="15" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2395">
+        <rect x="482.4607" y="1711.8838" width="28.346457" height="42.519685" fill="#c0c0ff"/>
+        <rect x="482.4607" y="1711.8838" width="28.346457" height="42.519685" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(487.4607 1723.9196)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="4.725228" y="15" xml:space="preserve">5</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2394">
+        <rect x="539.1536" y="1683.9652" width="28.346457" height="71.721875" fill="#c0c0ff"/>
+        <rect x="539.1536" y="1683.9652" width="28.346457" height="71.721875" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(544.1536 1710.6021)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" fill="black" x="4.725228" y="15" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Line_2393">
+        <line x1="482.4607" y1="1755.687" x2="482.4607" y2="1544.8154" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_2392">
+        <line x1="482.4607" y1="1755.687" x2="580.80505" y2="1756.3739" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_2391">
+        <text transform="translate(549.1557 1661.4745)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2390">
+        <text transform="translate(493.4628 1688.5373)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2389">
+        <text transform="translate(289.0355 1519.7422)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Nombre de correspondances</tspan>
+          <tspan font-family="Arial" font-size="15" fill="black" x="18.779297" y="31.490723" xml:space="preserve">consécutives maximum</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2388">
+        <text transform="translate(511.8532 1827.5574) rotate(-61)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2387">
+        <text transform="translate(525.7408 1619.8105)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">8</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2386">
+        <text transform="translate(488.31135 1820.3646) rotate(-61)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2385">
+        <text transform="translate(458.5358 1820.3646) rotate(-61)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 3</tspan>
+        </text>
+      </g>
+      <g id="Line_2384">
+        <line x1="403.55326" y1="1758.3953" x2="480.456" y2="1725.6376" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_2383">
+        <text transform="translate(326.70882 1758.038)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Correspondances</tspan>
+          <tspan font-family="Arial" font-size="15" fill="black" x="15.845947" y="31.490723" xml:space="preserve">consécutives</tspan>
+        </text>
+      </g>
+      <g id="Line_2397">
+        <line x1="183.75197" y1="1671.499" x2="295.91115" y2="1671.0553" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_2398">
+        <text transform="translate(123.38791 1602.8723)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">tri selon le nombre de corrélation consécutif</tspan>
+          <tspan font-family="Arial" font-size="15" fill="black" x="35.43091" y="31.490723" xml:space="preserve">puis par le nombre de corrélation</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

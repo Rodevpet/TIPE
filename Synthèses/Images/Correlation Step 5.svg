@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="305.44652 1120.5393 379.36844 296.78055" width="379.36844" height="296.78055">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 6 6" markerWidth="6" markerHeight="6" color="black">
+      <g>
+        <path d="M 3.7333333 0 L 0 -1.4 L 0 1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g id="Corr_lation" fill-opacity="1" stroke-dasharray="none" stroke="none" fill="none" stroke-opacity="1">
+    <title>Corrélation</title>
+    <g id="Corr_lation_Calque_1">
+      <title>Calque 1</title>
+      <g id="Graphic_2320">
+        <rect x="311.81102" y="1314.3806" width="28.346457" height="74.59573" fill="#c0c0ff"/>
+        <rect x="311.81102" y="1314.3806" width="28.346457" height="74.59573" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_2317">
+        <rect x="341.15748" y="1247.3221" width="28.346457" height="141.65427" fill="#c0c0ff"/>
+        <rect x="341.15748" y="1247.3221" width="28.346457" height="141.65427" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_2316">
+        <line x1="311.81102" y1="1388.9764" x2="311.81102" y2="1178.1047" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_2315">
+        <line x1="311.81102" y1="1388.9764" x2="466.98976" y2="1388.9764" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_2313">
+        <text transform="translate(351.15956 1224.8314)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">8</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2312">
+        <text transform="translate(322.8131 1291.8899)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">3</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2308">
+        <text transform="translate(324.68147 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2307">
+        <text transform="translate(351.15956 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2306">
+        <text transform="translate(379.506 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">3</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2305">
+        <text transform="translate(407.8525 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">4</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2304">
+        <text transform="translate(436.19893 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">5</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2332">
+        <rect x="623.62204" y="1361.4856" width="28.346457" height="27.490723" fill="#c0c0ff"/>
+        <rect x="623.62204" y="1361.4856" width="28.346457" height="27.490723" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_2331">
+        <line x1="512.2362" y1="1388.9764" x2="512.2362" y2="1178.1047" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_2330">
+        <line x1="512.2362" y1="1388.9764" x2="667.41496" y2="1388.9764" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_2328">
+        <text transform="translate(633.6241 1337.7113)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2325">
+        <text transform="translate(525.1067 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2324">
+        <text transform="translate(551.58476 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2323">
+        <text transform="translate(579.9312 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">3</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2322">
+        <text transform="translate(608.2777 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">4</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2321">
+        <text transform="translate(636.6241 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">5</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2335">
+        <text transform="translate(346.15748 1125.7746)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2336">
+        <text transform="translate(525.23924 1125.5393)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 3</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

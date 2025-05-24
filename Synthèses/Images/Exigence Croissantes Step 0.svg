@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="36.60259 233.7445 211.01614 170.66533" width="211.01614" height="170.66533">
+  <defs/>
+  <g id="Canevas_1" stroke-dasharray="none" stroke-opacity="1" stroke="none" fill-opacity="1" fill="none">
+    <title>Canevas 1</title>
+    <g id="Canevas_1_Calque_1">
+      <title>Calque 1</title>
+      <g id="Group_15">
+        <g id="Graphic_9">
+          <path d="M 63.1786 236.2445 L 222.41874 236.2445 C 229.04615 236.2445 234.41874 241.61708 234.41874 248.2445 L 234.41874 351.92558 C 234.41874 358.553 229.04615 363.92558 222.41874 363.92558 L 63.1786 363.92558 C 56.55118 363.92558 51.178596 358.553 51.178596 351.92558 L 51.178596 248.2445 C 51.178596 241.61708 56.55118 236.2445 63.1786 236.2445 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+        </g>
+        <g id="Line_10">
+          <line x1="49.80259" y1="338.69723" x2="234.41874" y2="339.49705" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="4"/>
+        </g>
+        <g id="Line_11">
+          <line x1="131.72922" y1="381.78384" x2="132.03498" y2="363.92558" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="4"/>
+        </g>
+        <g id="Line_12">
+          <line x1="155.07189" y1="381.78384" x2="155.37765" y2="363.92558" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="4"/>
+        </g>
+        <g id="Graphic_13">
+          <path d="M 100.40101 401.90983 L 189.15553 401.90983 C 194.08695 401.90983 198.08466 397.9121 198.08466 392.9807 L 198.08466 392.9807 C 198.08466 388.04927 194.08695 384.05156 189.15553 384.05156 L 100.40101 384.05156 C 95.46959 384.05156 91.47188 388.04927 91.47188 392.9807 L 91.47188 392.9807 C 91.47188 397.9121 95.46959 401.90983 100.40101 401.90983 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

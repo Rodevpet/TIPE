@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="-147.59252 1120.7746 432.5571 296.5452" width="432.5571" height="296.5452">
+  <defs>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 6 6" markerWidth="6" markerHeight="6" color="black">
+      <g>
+        <path d="M 3.7333333 0 L 0 -1.4 L 0 1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g id="Corr_lation" fill-opacity="1" stroke-dasharray="none" stroke="none" fill="none" stroke-opacity="1">
+    <title>Corrélation</title>
+    <g id="Corr_lation_Calque_1">
+      <title>Calque 1</title>
+      <g id="Graphic_2290">
+        <rect x="170.07874" y="1346.4567" width="28.346457" height="42.519685" fill="#c0c0ff"/>
+        <rect x="170.07874" y="1346.4567" width="28.346457" height="42.519685" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_2291">
+        <rect x="198.4252" y="1346.4567" width="28.346457" height="42.519685" fill="#c0c0ff"/>
+        <rect x="198.4252" y="1346.4567" width="28.346457" height="42.519685" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_2292">
+        <rect x="226.77165" y="1346.4567" width="28.346457" height="42.519685" fill="#c0c0ff"/>
+        <rect x="226.77165" y="1346.4567" width="28.346457" height="42.519685" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_2289">
+        <rect x="141.73228" y="1303.937" width="28.346457" height="85.03937" fill="#c0c0ff"/>
+        <rect x="141.73228" y="1303.937" width="28.346457" height="85.03937" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_2285">
+        <line x1="112.38583" y1="1388.9764" x2="112.38583" y2="1178.1047" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Line_2287">
+        <line x1="112.38583" y1="1388.9764" x2="267.56457" y2="1388.9764" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+      <g id="Graphic_2288">
+        <text transform="translate(-105.07421 1381.061)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Correspondances consécutives</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2294">
+        <text transform="translate(151.73437 1274.8955)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2295">
+        <text transform="translate(182.58187 1319.3806)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2296">
+        <text transform="translate(208.42728 1319.3806)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2297">
+        <text transform="translate(236.77374 1319.3806)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2298">
+        <text transform="translate(-142.59252 1152.2832)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Nombre de correspondances consécutives</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2299">
+        <text transform="translate(125.25628 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2300">
+        <text transform="translate(151.73437 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2301">
+        <text transform="translate(180.08082 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">3</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2302">
+        <text transform="translate(208.42728 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">4</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2303">
+        <text transform="translate(236.77374 1394.8291)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">5</tspan>
+        </text>
+      </g>
+      <g id="Graphic_2334">
+        <text transform="translate(147.56302 1125.7746)" fill="black">
+          <tspan font-family="Arial" font-size="15" fill="black" x="0" y="14" xml:space="preserve">Musique 1</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

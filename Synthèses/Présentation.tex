@@ -1,0 +1,226 @@
+\documentclass[10pt]{beamer}
+
+\usepackage[french]{babel}
+
+\usepackage{preambule_diaporama_V5}
+\usepackage{wasysym}
+\usepackage{svg}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\title{Titre}
+%
+%% séparation colonnes
+%\setlength{\columnseprule}{0.2mm}
+%\setlength{\columnsep}{5mm}
+
+
+
+\graphicspath{ {./Images/} }
+
+\algnewcommand\algorithmicto{\textbf{to}}
+\algrenewtext{For}[3]
+{\algorithmicfor\ #1 $\gets$ #2 \algorithmicto\ #3 \algorithmicdo}
+
+
+\begin{document}
+
+
+\frame{\titlepage}
+
+\setcounter{section}{3}
+
+\section{Introduction}
+
+\subsection{Enjeux}
+
+
+\begin{frame}{Le labyrinthe du Big Data}
+\begin{center}
+\textit{Toute cette mutation en présence d'informations de plus en plus diverses et
+volumineuses (Big Data) requiert des besoins de mesure nouveaux, tant en
+termes de bande passante que de performances d'où la nécessité d'appareils
+de mesure, de développement et d'analyse qui répondent à ces exigences
+technologiques.}
+\end{center}
+\begin{flushright}
+Un random.
+\end{flushright}
+
+\end{frame}
+
+
+
+\subsection{Les exigences croissantes}
+
+
+\begin{frame}{En cours de chargement... Veuillez patientez...}
+\includegraphics[scale=0.4]{Résultat_Googles.png}
+\begin{center}
+	Environ \textbf{6\ 220\ 000\ 000} résultats (\textbf{0,28} secondes)
+\end{center}
+\end{frame}
+
+\subsection{Problématique}
+\begin{frame}{Problématique}
+	\begin{center}
+		\textbf{\underline{Comment identifier des signaux numériques de manière efficace ?}}
+	\end{center}
+\end{frame}
+
+\section{Modélisation du problème}
+\subsection{Représentation du signal numérique}
+\begin{frame}{Représentation du signal numérique}
+\begin{columns}
+\begin{column}{0.5\textwidth}	
+\begin{figure}
+	\includegraphics[scale=0.3]{N_point_series.eps}
+	 \caption{(Signal discret et signal continu)}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}	
+	$T_e\equiv$ Période d'échantillonage
+	
+	$F_e\equiv$ Fréquence d'échantillonage.
+	
+	$N\equiv$ série de point composant.
+\end{column}
+
+\end{columns}
+\end{frame}
+\subsection{Représentation de la collection des musiques}
+\begin{frame}{Représentation de la collection des musiques}
+	\begin{itemize}
+		\item On modélise la bibliothèque de musique sous forme de table de hashage
+		\item On note $\mathcal{C}$ l'ensemble des clés de la table.
+		\item On note $\mathcal{N}$ l'ensemble des éléments contenu dans le tableau
+		\item Chaque musique est représenté par un couple $(cle,nom)$ avec $cle \in \mathcal{C}$ et $nom \in \mathcal{N}$.
+		\item $nom$ correspond au nom de la musique
+		\item $cle$ correspond au \textit{fingerprint} de la musique.\footnote{Le terme \textit{fingerprint} est un anglicisme voulant littéralement dire "empreinte de doigt", celle-ci étant unique pour chaque humain, on utilise ce terme pour parler d'un identifiant unique.}
+		\item On note $S$ le signal numérique associé à une musique donné.
+		\item On note $f:S\to C$ la fonction de hachage associant à un signal numérique donné, son \textit{fingerprint}
+	\end{itemize}
+\end{frame}
+\section{1ère Approche - La Fast Fourier Transform}
+\subsection{Définition}
+\begin{frame}{Définition}
+	\begin{df}{}{}
+		La \textit{Fast Fourier Transform} abrégé \textit{fft} est un algorithme permettant de déterminer les coefficients de Fourier d'un signal numérique.
+	\end{df}
+\end{frame}
+\subsection{L'algorithme de Cooley-Tukey}
+\begin{frame}{Spécification}
+	\begin{itemize}
+		\item Il est récursif
+		\item Il est basé sur le paradigme de "diviser pour régner"
+		\item Sa complexité est en $O(n\log{n})$ avec $n$ le nombre de coefficient de Fourier.
+		\item Entrée : Un signal sous forme de décomposition de fourrier et la liste des racine n-ième de l'unité $\mathbb{U}_n$.
+		\item Sortie :  La liste des coefficients de fourrier.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Principe}
+\begin{itemize}
+	\item Soit $x[k]$ l'amplitude du signal audio dans l'espace temporel.
+\end{itemize}
+\end{frame}
+\begin{frame}[t]{Principe}
+\begin{itemize}
+	\item Soit $x[k]$ l'amplitude du signal audio dans l'espace temporel.
+	\item On définit ses coefficients de Fourier $X[n]$ selon la relation suivante avec $n\in \llbracket 0, N-1\rrbracket$ :
+\end{itemize}
+$$X[n]=\sum^{N-1}_{k=0}x[k]e^{-2\pi i\frac{k n}{N}}$$
+\end{frame}
+
+\begin{frame}[t]{Principe}
+\begin{itemize}
+	\item Soit $x[k]$ l'amplitude du signal audio dans l'espace temporel.
+	\item On définit ses coefficients de Fourier $X[n]$ selon la relation suivante avec $n\in \llbracket 0, N-1\rrbracket$ :
+\end{itemize}
+$$X[n]=\sum^{N-1}_{k=0}x[k]e^{-2\pi i\frac{k n}{N}}$$
+
+On décompose ensuite le polynôme selon le degré paire $(k=2m)$ et impaire $(k=2m+1)$,
+\end{frame}
+\begin{frame}[t]{Principe}
+\begin{itemize}
+	\item Soit $x[k]$ l'amplitude du signal audio dans l'espace temporel.
+	\item On définit ses coefficients de Fourier $X[n]$ selon la relation suivante avec $n\in \llbracket 0, N-1\rrbracket$ :
+\end{itemize}
+$$X[n]=\sum^{N-1}_{k=0}x[k]e^{-2\pi i\frac{k n}{N}}$$
+
+On décompose ensuite le polynôme selon le degré paire $(k=2m)$ et impaire $(k=2m+1)$,
+\begin{align*}
+	X[n]&=\sum^{\lfloor \frac{N}{2}-1\rfloor}_{m=0}x[2m]e^{-2\pi i\frac{(2m)n}{N}} + \sum^{\lfloor \frac{N}{2}-1\rfloor}_{m=0}x[2m+1]e^{-2\pi i\frac{(2m+1)n}{N}}\\
+	&=\underbrace{\sum^{\lfloor \frac{N}{2}-1\rfloor}_{m=0}x[2m]e^{-2\pi i\frac{(2m)n}{N}}}_{E_n}+\underbrace{e^{-2\pi i \frac{n}{N}}\sum^{\lfloor \frac{N}{2}-1\rfloor}_{m=0}x[2m+1]e^{-2\pi i\frac{(2m+1)n}{N}}}_{O_n}
+\end{align*}
+\end{frame}
+\begin{frame}[t]{Principe}
+	Ainsi,
+	$$X[n]=E_n+e^{-\frac{2\pi i}{N}n}O_n$$
+	$$X \left[n+\frac{N}{2}\right]=E_n-e^{-\frac{2\pi i}{N}n}O_n$$
+	
+	Les résultats intermédiaires $E_n$ et $O_n$ sont réutilisé. Le temps de calcul est alors réduit.
+\end{frame}
+
+
+\begin{frame}[t]{Principe}
+
+
+%\Require Le signal sous forme de tableau : $T$
+%\Require Le nombre de point sur lequel on veut faire la fft : $N$
+%\Require Intervalle de saut entre les indices du tableau d’entrée $T$ :
+%
+%	1.	x : Il s’agit de la séquence d’entrée, c’est-à-dire le signal dont on veut calculer la FFT. Ce paramètre est généralement un tableau de nombres complexes ou réels représentant les valeurs du signal.
+	%2.	N : C’est la longueur de la FFT à calculer, ou le nombre de points dans la séquence d’entrée. Cette valeur doit être une puissance de deux pour l’algorithme de Cooley-Tukey (comme 2, 4, 8, 16, etc.).
+	%3.	s : Ce paramètre représente l’intervalle de saut entre les indices du tableau d’entrée x. Ce saut est utilisé pour accéder aux éléments en divisant récursivement la séquence en sous-séquences de plus en plus petites (pairs et impairs). Au début de la récursion, s est initialisé à 1 (ce qui signifie qu’on prend chaque élément de la séquence), puis il augmente en doublant à chaque étape de la récurs
+	%%\State {\color{gray} // $T[:s]$ on enlève les $s$ premiers éléments tel qu'on a bien toujours $|T[:s]|\equiv 1[2]$}
+	%%Isolation du morceaux, Mi-Piano- 181 point, variation dans le temps d'une amplitude.
+%%%
+\begin{algorithm}[H]
+
+\caption{Algorithme de Cooley-Tukey}\label{ACT}
+\begin{algorithmic}[1]
+\Function{FFT}{$T,N,s$}
+\If {$N=1$}
+	\State \Return $T[0]$
+\EndIf
+\State partie\_paire $\gets$ \Call{FFT}{T,$\displaystyle\frac{N}{2}$,$2s$}
+\State partie\_impaire $\gets$ \Call{FFT}{$T[:s]$,$\displaystyle\frac{N}{2}$,$2s$}
+\State resultat $\gets []$
+\For{i}{0}{$\frac{N}{2}$}
+\State t $\gets e^{-2j*\pi\times\frac{k}{N}}\times$ partie\_ impaire $[k]$
+\State resultat$[k]\gets$partie\_paire$[k] + t$
+\State resultat $[k + \frac{N}{2}] \gets$ partie\_paire $ [k] - t$
+\EndFor
+\State \Return resultat
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+\end{frame}
+\center
+\begin{frame}[t]{Échantillons}
+	\begin{tabular}{c c}
+		Animals (Martin Garrix) & Titanium (David Guetta)\\
+		\includegraphics[scale=0.2]{Album_Animals} & \includegraphics[scale=0.2]{Album_Titanium}\\
+		$\approx$ 15 secondes & $\approx$ 15 secondes\\
+		65535 points & 65535 points (faire différament)
+	\end{tabular}
+\end{frame}
+\begin{frame}{Résultats}
+	\includegraphics[scale=0.4]
+	{Spectres_Garrix_vs_Guetta}
+\end{frame}
+\begin{frame}{Plusieurs problèmes}
+% Plusieurs problème
+% Tout d'abord pour l'utilisateur
+	%1,6 Mo *
+	% approx 138 T
+\begin{figure}[htbp]
+  \centering
+  \includesvg{Fichier_Icone.svg}
+  \caption{svg image}
+\end{figure}
+Le risque 
+
+\end{frame}
+\end{document}
+

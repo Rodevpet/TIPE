@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+q\documentclass[a4paper]{report}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -13,11 +13,21 @@
 \usepackage{geometry}
 \usepackage{fancyhdr}
 
-% Paquet de la matière et Raccourci commun à tout les modèles
-\usepackage{./macros/Raccourci_Commun}
-\usepackage{./macros/Math}
-\usepackage{./macros/PC}
+% Personnalisation des titres
+\usepackage{titlesec}
 
+% Personnalisation des pieds de page et des en-têtes
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{lastpage}
+
+% \chapter est définie sur le pagestyle "plain", on redéfinie sur "fancy"
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+% Paquet de la matière et Raccourci commun à tout les modèles
+\usepackage{./macros/macros}
+\usepackage[T1]{fontenc}
+\usepackage{svg}
 % Graphique
 \usepackage{tikz}
 
@@ -25,18 +35,62 @@
 \usepackage{datetime}
 \usepackage{hyperref}
 \usepackage{systeme}
-
+\usepackage{amsthm}
+\theoremstyle{remark}
+\newtheorem{remark}{Remarque}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%    Configuration du modèle    %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Taille et marge de la page
-\geometry{a4paper, margin=3cm}
+%%%%% Notation Romaine
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Roman{section}.\Roman{subsection}}
+
+
+
+%%% Style des titres
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{   \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+    Partie \thechapter
+    } % label
+{0ex} % sep
+{
+  \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+
+% Style pour les titres de section
+\titleformat{\section}
+{\Huge\bfseries}
+{\thesection}
+{1em}
+{}
+
+\titleformat{\subsection}
+{\Large\bfseries}
+{\thesubsection}
+{1em}
+{}
+% Taille et marge de la page (Format A4 marges fines)
+\geometry{a4paper, margin=1.37cm}
+\titlespacing*{\chapter}{0pt}{0ex plus 0ex minus 0ex}{0ex plus 0ex}
 
 % Début du docuement
 \begin{document}
+%%%%%%
+
+%%%%
 % Début de la page de garde
 \begin{titlepage}
   \definecolor{HR}{HTML}{2D88C4}
@@ -60,7 +114,7 @@
 
     \vspace{2.5cm}
 
-    {\Huge\bfseries Titre \par}
+    {\Huge\bfseries Analyse sonique par filtrage analogique et étude spectrale d'une transformé discrète de Fourier \par}
 
     \vspace{2cm}
     {\Large Robin PETIT, Autheur \par}
@@ -71,17 +125,46 @@
 % Fin de la page de garde
 \end{titlepage}
 
-% Début de la mise en palce de la police de caractère
-\sffamily\Large
-
 % Construction de la table des matières
 \tableofcontents
 
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot{} 
+\fancyfoot[RO,RE]{\thepage /\pageref{LastPage}}
+
 % Initialisation de la première page
 \newpage
-\section{Présentation}
-% Fin de la mise en palce de la police de caractère
-\sffamily\Large
 
+\chapter{Mécanique}
+\section{Acquisition du son}
+\subsection{Propagation}
+\subsubsection{Caractère ondulatoire}
+Le son peut être représenter sous la forme d'une onde\textbf{ {\color{bleu}mécanique}  {\color{violet}longitudinale} {\color{cyan}plane} {\color{vert}progressive}}.
+\begin{remark}
+	Ce TIPE pars du principe que le milieu est toujours isotrope.
+\end{remark}
+
+
+\begin{itemize}
+\item[$\bullet$] 	\textbf{\color{bleu}mécanique} : Perturbation dans un milieu matériel.
+\item[$\bullet$] 	\textbf{\color{violet}longitudinale} : Perturbation dans la direction de propagation.
+\item[$\bullet$] 	\textbf{\color{cyan}plane} : Front d'onde contenu dans un plan.
+\item[$\bullet$] 	\textbf{\color{vert}progressive} : Transport d'énergie dans toute direction accessible.
+\end{itemize}
+
+\subsubsection{Modèle d'onde plane harmonique}
+\lformule{\center $\psi(x,t)=A\cos{\omega t-kx+\varphi}$}{
+A : Amplitude de Vibration
+
+$\omega$ : pulsation
+
+$k$ : nombre d'onde
+}
+
+\subsection{Réception}
+\subsubsection{Microphone électrostatique}
+
+\newpage
 % Fin du document
 \end{document}

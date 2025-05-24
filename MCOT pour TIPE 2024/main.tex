@@ -1,0 +1,121 @@
+\documentclass[12pt,a4paper]{article}
+%----------------------------------------------------------------
+% DÉBUT DE L'ENTÊTE
+% À IGNORER EN PREMIÈRE LECTURE
+%----------------------------------------------------------------
+\usepackage{url}            % Pour citer les adresses web
+\usepackage[T1]{fontenc}    % Encodage des accents
+\usepackage[utf8]{inputenc} % Lui aussi
+\usepackage[french]{babel} % Pour la traduction française
+\usepackage{amsmath}        % La base pour les maths
+\usepackage{mathrsfs}       % Quelques symboles supplémentaires
+\usepackage{amssymb}        % encore des symboles.
+\usepackage{amsfonts}       % Des fontes, eg pour \mathbb.
+
+\usepackage[svgnames]{xcolor} % De la couleur
+\usepackage{geometry}       % Gérer correctement la taille
+
+
+
+\newcounter{nextyear}
+\setcounter{nextyear}{\the\year}
+\addtocounter{nextyear}{1}
+
+% Mettez votre titre de TIPE et votre nom ci-après
+\title{Optimisation du traitement du signal sonore sous forme numérique.}
+\author{Robin PETIT, MP\oldstylenums{1}-MPi, \oldstylenums{\the\year}-\oldstylenums{\arabic{nextyear}} }
+%% À décommenter si vous ne voulez pas que la date apparaisse explicitement
+\date{}
+
+% Un raccourci pour composer les unités correctement (en droit)
+% Exemple: $v = 10\U{m.s^{-1}}$
+\newcommand{\U}[1]{~\mathrm{#1}}
+
+% Pour discuter avec le prof dans le document: le premier argument est 
+% le nom de celui qui fait la remarque et le second la remarque 
+% proprement dite: \question{jj}{Que voulez-vous dire par là ?}
+% \reponse{Droopy}{I'm very happy...}
+\usepackage{todonotes}
+\newcommand{\question}[2]{\todo[inline,author=#1]{#2}}
+\newcommand{\reponse}[2]{\todo[inline,color=green,author=#1]{#2}}
+
+% Les guillemets \ofg{par exemple}
+\newcommand{\ofg}[1]{\og{}#1\fg{}}
+% Le d des dérivées doit être droit: \frac{\dd x}{\dd t}
+\newcommand{\dd}{\text{d}}
+
+
+
+% NB: le script TeXcount permet de compter les mots utilisés dans chaque section d'un document LaTeX. Vous en trouverez une version en ligne à l'adresse
+% http://app.uio.no/ifi/texcount/online.php
+% Il suffit d'y copier l'ensemble du présent document (via Ctrl-A/Ctrl-C puis Ctrl-V dans la fenêtre idoine) pour obtenir le récapitulatif tout en bas de la page qui s'ouvre alors.
+
+% Pour récupérer les bonnes entrées bibliographiques, je vous conseille l'usage de scholar.google.fr pour les recherches
+% et la récupération des entrée BibTeX comme décrit dans cette vidéo: https://www.youtube.com/watch?v=X-9T2Oaj-5A
+
+\newcommand{\positionnementThematique}[1]{
+\section*{Positionnement thématique}
+{\it #1}}
+
+\newcommand{\motclefs}[2]{
+    \section*{Mots-clefs}
+        \begin{description}
+            \item[Mots-clefs] -- #1 
+            \item[Keywords]   -- #2
+        \end{description}
+}
+\setlength {\marginparwidth }{2cm}
+%-----------------------------------------------------------------------------
+% FIN DE L'ENTÊTE
+%-----------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+%--------------------------------------------------
+\section*{Professeur encadrant:}
+\begin{itemize}
+	\item M.Bertin
+\end{itemize}
+%--------------------------------------------------
+\section*{Motivations pour le choix du sujet (50 mots)}
+%--------------------------------------------------
+Ma motivation vient d'une certaine admiration pour le traitement du signal, aujourd'hui les analyses et interprétations des signaux cadencent la vie politique, économique et scientifique des sociétés modernes. Toutes les données qui transitent et qui sont traduites de la forme analogique à numérique nécessitent d'être traitées, et beaucoup de modes opératoires furent découverts afin d'accélérer le traitement du signal.
+\section*{Ancrage du sujet au thème de l'année (50 mots)}
+%--------------------------------------------------
+Ce TIPE repose essentiellement sur l'utilisation de la transformée de Fourier, et le passage de la dimension temporelle en dimension fréquentielle. Je m'intéresse à un moyen de convertir un signal sonore en un identifiant unique de celui-ci grâce à une fonction de hachage.
+%--------------------------------------------------
+\positionnementThematique{Optimisation d'algorithme, Théorie du signal, Calcul de complexes }
+%--------------------------------------------------
+\motclefs{Transformé de Fourier, Transformé de Fourier Rapide, fréquences, Algorithme de Cooley-Tukey, spectre, signal, ondes}{Fourier Transform, Fast Fourier Transform, frequencies, Cooely-Tukey Algorithm, spectral, signal, waves}
+%--------------------------------------------------
+\section*{Bibliographie commentée (650 mots maximum)}
+%--------------------------------------------------
+% D'après TeXcount, la section fait 366 mots: 
+% 366+3+0 (1/0/4/0)
+Depuis ... certaines applications telles que Shazam ont pour but de donner le titre d'une musique à partir d'un échantillon sonore. Le logiciel développé par Shazam Entertainment Limited fut construit de façon à optimiser le traitement du signal audio et minimiser les risques d'erreur dans le résultat retourné.
+
+En premier lieu, Shazam fait appel à la transformée de Fourier permettant de \textbf{convertir} un signal numérique de la dimension temporelle vers la dimension fréquentielle \cite{ouahabi_analyseurs_2023}. Il est assez facile de coder un algorithme naïf capable de convertir un signal numérique en spectre de Fourier, mais un tel algorithme devient inefficace lorsqu'il s'agit d'analyser un échantillon entier \cite{TP_FFt} . Pour répondre à cet enjeu, des algorithmes, comme \textit{Cooley–Tukey FFT algorithm}, furent mis au point \cite{noauthor_cooleytukey_2024}. Cette approche est formalisée dans un article de James W. Cooley et John W. Tukey intitulé \textit{An Algorithm for the Machine Calculation of Complex Fourier Series}\cite{First_Article_Cooley_Tukey}. Lors de l'acquisition d'un signal, un phénomène de "bruit" peut apparaître, on utilise alors une fenêtre afin de lisser les données \cite{noauthor_fenetrage_2024} . Grâce à une méthode de hachage publiée dans un article sur le blog de Michel Strauss sur le fonctionnement de Shazam, il est possible de créer une corrélation entre un son enregistré et une empreinte d'un signal numérique afin de pouvoir attribuer à chacun des signaux un identifiant unique, un \textit{fingerprint}\cite{noauthor_how_nodate}. 
+%--------------------------------------------------
+\section*{Problématique retenue (50 mots)}
+%--------------------------------------------------
+Comment identifier un morceau de musique de manière unique et efficace à partir d'un échantillon sonore numérisé ?
+%--------------------------------------------------
+\section*{Objectifs du TIPE (100 mots maximum)}
+%--------------------------------------------------
+\begin{enumerate}
+	\item	Optimisation : Calcul du spectre de Fourier à partir de l'algorithme de Cooley-Tukey.    %\item Réduction du bruit : Le choix de la fenêtre sera crucial afin de réduire le bruit mais aussi car une fenêtre trop restrictive peut supprimer les particularités sonores permettant de différencier les signaux.
+    \item Création de la première version du \textit{Fingerprint} : création d'une empreinte d'un échantillon sonore grâce aux pics d'intensités des fréquences et de la fonctions de hachage.
+    %\item Limite actuelle de la FFT : Le spectre de Fourier peut parfois être très proche pour deux musiques, notamment les remix.
+    %\item Introduction de la STFT : On ajoute la dimension temporelle à la mesure, en plus de l'amplitude et de la fréquence afin d'avoir un champ d'information plus vaste pour l'empreinte du son.
+    \item Création d'une deuxième version du \textit{Fingerprint} : acquisition de multiples spectres de Fourier  au cours du temps puis compilation de ces spectres pour créer une empreinte plus précise.
+    \item Conclusion sur la manière dont une machine peut efficacement reconnaître un échantillon sonore de façon unique.
+\end{enumerate}
+%--------------------------------------------------
+%--------------------------------------------------
+% Pour faire apparaître la bibliographie avec des chiffres, 
+% dans l'ordre d'apparition dans le texte
+\bibliographystyle{unsrt-fr}     % Style de la bibliographie (numérotée dans l'ordre d'apparition du texte)
+\bibliography{biblio} % Nom du fichier .bib à utiliser
+
+
+\end{document}
