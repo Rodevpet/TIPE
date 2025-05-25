@@ -571,33 +571,7 @@ On construit 2 tables
   title:"5ème étape : Reconaissance",
   subtitle:"Conclusion"
 )[
-    #place(left+horizon)[
-    #image("Images/Podium.svg")
+    #place(center+horizon)[
+    #image("Images/Podium.png")
   ]
 ]
-== Principe
-Explication du principe grâce au blog
-
-== Pseudo-Code
-
-Pseudo-Code
-
-== Test sur des exemples 
-- Calcul du taux de collision
-- Calcul de la taille de la clé
-- Calcul du temps de génération de la clé (hors les 15s)
-
-= Conclusion
-
-== Principe
-Explication du principe grâce au blog
-
-== Pseudo-Code
-Pseudo-Code
-
-== Test sur des exemples 
-- Calcul du taux de collision
-- Calcul de la taille de la clé
-- Calcul du temps de génération de la clé (hors les 15s)
-
-= Conclusion
