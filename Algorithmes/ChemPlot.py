@@ -31,7 +31,7 @@ class ChemPlot:
     )
         self.fig.update_xaxes(gridcolor='black', griddash='solid', minor_griddash="dot",minor_gridcolor='gray')
         self.fig.update_yaxes(gridcolor='black', griddash='solid', minor_griddash="dot",minor_gridcolor='gray')
-        pd.options.plotting.backend = "plotly"
+        self.fig.update_layout(template="plotly_white")
     def axes_ratio (self):
         self.fig.update_xaxes(
         scaleanchor = "x",

@@ -279,15 +279,6 @@ Réalisation d'un premier teste avec ces deux échantillons sur 4 seconde
 )
 ]
 ]
-#slide(
-  title:"Le résultat d'une simple FFT",
-  subtitle:"Bilan"
-)[
-//Supposons que nous prenions tout les points, alors
-- Graphe de pourcentage de même point (pour tout les points)
-- Graphe de ce qui se passe avec un spectre différent //avec les 100 premiers point
-//Si on considère que notre fonction de hashage est la fft alors trop de colision
-]
 
 #new-section-slide("2ème Approche - La STFT")
 #slide(
@@ -443,8 +434,9 @@ On applique alors le principe à la STFT
 On applique alors le principe à la STFT en prenant les 15 pics
   */
 #figure(
-  image("Images/Constellation.png"),
+  image("Images/Constellation.svg",width: 80%),
 )
+Voir l'annexe pour le code de génération de la constellation.
 ]
 #slide(
   title:"2ème étape : Le Hashage",
@@ -574,4 +566,83 @@ On construit 2 tables
     #place(center+horizon)[
     #image("Images/Podium.png")
   ]
+]
+#focus-slide(new-sec: none)[
+  FIN
+]
+
+#new-section-slide("Annexe")
+#slide(
+  title:"La fonction de hashage en détail"
+)[
+```py
+def create_hashes(constellation, song_id=None):
+    hashes = {}
+    freq_max = 23_000
+    n_bits_freq = 10
+    for idx, (time, freq) in enumerate(constellation):
+        for next_time, next_freq in constellation[idx : idx + 60]:
+            diff = next_time - time
+            if diff <= 1 or diff > 10:
+                continue
+            freq_binned = freq / freq_max * (2 ** n_bits_freq)
+            other_freq_binned = next_freq / freq_max * (2 ** n_bits_freq)
+            hash = int(freq_binned) | (int(other_freq_binned) << 10) | (int(diff) << 20)
+            hashes[hash] = (time, song_id)
+    return hashes,occurrence_hash
+}
+```
+]
+#slide(
+  title:"La fonction de hashage en détail"
+)[
+#place(center+horizon)[
+  #image("Images/Collisions.svg",width: 100%)
+]
+]
+#slide(
+  title:"Génération de la constellation en détail"
+)[
+  ```py
+def cree_constellation(audio, Fs):
+    # Paramètres
+    Fenetre = 0.5 #en seconde
+    #fréquence d'échantillonage : on utilise celui du CD
+    freq_ech = 44100 #Hz
+    Nbre_point = int(Fenetre * freq_ech)
+    Nbre_point += Nbre_point % 2
+    # Nombre de pic voulu, plus la fenêtre est grande plus le nombre de pics peut être élevé.
+    Nbre_pics = 4
+
+    # Complète le son pour obtenir des multiple de Nbre_point
+    amount_to_pad = Nbre_point - audio.size % Nbre_point
+
+    #Nouveau son tel qu'il est divisible par Nbre_point
+    son_complete = np.pad(audio, (0, amount_to_pad))
+
+    # On procède à une transformé de fourrier sur le son complété
+    frequences, temps, stft = signal.stft(
+        son_complete, Fs, nperseg=Nbre_point, nfft=Nbre_point, return_onesided=True
+    )
+
+    # Initialisation de la constellation
+    constellation = []
+
+    for temps_id, fen in enumerate(stft.T):
+        # Le spectre est complexe par défaut.
+        # Nous voulons seulement son module.
+        spectre = abs(fen)
+        # find_peaks retourne les pics et leurs caractéristique, ici la distance entre 2 pics doit être de 2000 points.
+        pics, props = signal.find_peaks(spectre, prominence=0, distance=2000)
+        # Nous souhaitons uniquement les pics les plus proéminent.
+        # Avec un maximum de 4 pics par tranche.
+        Nbre_pics_1 = min(Nbre_pics, len(pics))
+        largest_peaks = np.argpartition(props["prominences"], -Nbre_pics_1)[-Nbre_pics_1:]
+        for pic in pics[largest_peaks]:
+            frequence = frequences[pic]
+            constellation.append([temps_id, frequence])
+
+    return constellation
+  ```<Annexe-Constellation>
+  
 ]
